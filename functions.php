@@ -120,6 +120,12 @@ function square_apple_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'square_apple_scripts' );
 
+add_action( 'wp_enqueue_scripts', 'prefix_enqueue_awesome' );
+
+function prefix_enqueue_awesome() {
+    wp_enqueue_style( 'prefix-font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', array(), '4.0.3' );
+}
+
 remove_filter('the_content', 'wpautop');
 
 /**

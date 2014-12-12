@@ -78,6 +78,13 @@ function square_apple_setup() {
 endif; // square_apple_setup
 add_action( 'after_setup_theme', 'square_apple_setup' );
 
+/******WOOCOMMERCE**************/
+
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
 /**
  * Register widget area.
  *

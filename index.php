@@ -13,8 +13,6 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -31,16 +29,14 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php square_apple_paging_nav(); ?>
+			<?php square_apple_paging_nav( 'nav-below'); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+			<?php get_template_part( 'no-results', 'index' ); ?>
 
 		<?php endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

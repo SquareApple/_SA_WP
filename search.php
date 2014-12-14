@@ -7,13 +7,10 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'square_apple' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			<header>
+				<h2 class="page-title"><?php printf( __( 'Search Results for: %s', 'square_apple' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
@@ -30,16 +27,14 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php square_apple_paging_nav(); ?>
+			<?php square_apple_paging_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+			<?php get_template_part( 'no-results', 'search' ); ?>
 
 		<?php endif; ?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

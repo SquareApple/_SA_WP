@@ -14,12 +14,13 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php square_apple_posted_on(); ?>
+			<span class="author-link" itemscope="itemscope" itemtype="http://schema.org/Person" itemprop="author"><?php square_apple_posted_on(); ?></span>
+<time class="entry-date" datetime="<?php the_date('F jS, Y'); ?>" itemprop="datePublished" pubdate><?php the_date('F jS, Y'); ?></time>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-summary">
+	<div class="entry-summary" itemprop="text">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 

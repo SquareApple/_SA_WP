@@ -9,8 +9,8 @@
 ?>
 
 <section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title entry-title"><?php _e( 'Nothing Found', 'square_apple' ); ?></h1>
+	<header>
+		<h1 class="page-title"><?php _e( 'Nothing Found', 'square_apple' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">

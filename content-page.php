@@ -7,11 +7,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<header>
+		<h1 class="page-title entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content" itemprop="text">
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
@@ -21,7 +21,5 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php edit_post_link( __( 'Edit', 'square_apple' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-footer -->
+<?php edit_post_link( __( 'Edit', 'square_apple' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
 </article><!-- #post-## -->
